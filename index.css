@@ -1,0 +1,41 @@
+body{
+    justify-content: center;
+    margin:0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-image: url(https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/non-4k/original/18.jpg?3);
+    font-family: sans-serif;
+}
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+.btn {
+    background-color: rgb(44, 187, 180);
+    padding: 20px 40px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.4);
+    color:black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content:"";
+    position: absolute;
+    background-color: rgb(179, 32, 130);
+    width: 0;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before{    
+    width: 300px;
+    height: 300px;    
+}
